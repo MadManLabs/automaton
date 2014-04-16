@@ -31,7 +31,7 @@ software = ['vlc', 'calibre', 'gimp', 'blender', 'unrar']
 python_lib = ['numpy', 'matplotlib', 'scipy', 'pip', 'nmap', 'xlrd', 'biopython']
 games = ['openttd', 'openarena']
 
-eclipse = 'http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/kepler/SR2/eclipse-standard-kepler-SR2-linux-gtk-x86_64.tar.gz&mirror_id=580'
+eclipse = 'http://www.auto_eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/kepler/SR2/auto_eclipse-standard-kepler-SR2-linux-gtk-x86_64.tar.gz&mirror_id=580'
 minecraft = 'https://www.dropbox.com/s/683xlul3mgmj5lg/Minecraft.jar'
 tor = 'https://www.torproject.org/dist/torbrowser/3.5.3/tor-browser-linux64-3.5.3_en-US.tar.xz'
 
@@ -39,7 +39,7 @@ tor = 'https://www.torproject.org/dist/torbrowser/3.5.3/tor-browser-linux64-3.5.
 alias = ['minecraft=\'java -jar /home/martin/Hry/Minecraft.jar\'', 
          'sicstus=\'/usr/local/sicstus4.2.0/bin/sicstus\'', 
          'tor=\'/opt/tor-browser_en-US/start-tor-browser\'', 
-         'eclipse=\'/opt/eclipse/eclipse\'', 
+         'auto_eclipse=\'/opt/auto_eclipse/auto_eclipse\'', 
          'alias unrar=\'unrar x\'']
 nano = []
 
