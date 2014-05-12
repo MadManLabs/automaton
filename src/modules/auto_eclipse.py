@@ -38,9 +38,11 @@ def download_eclipse(url):
             exit(0)
     
     # Download to tmp dir
-    wget_command = 'wget ' + url + ' ' + cfg.use_tmp_dir
+    #wget_command = 'wget ' + url + ' -P' + cfg.use_tmp_dir
+    wget_command = 'wget ' + 'http://www.novinky.cz/static/images/logo.gif' + ' -P' + cfg.use_tmp_dir
+    print "===\nstart download \n",wget_command,"\n==="
     os.system(wget_command)
-    
+    exit()
     # Extract from tar file
     file_name = url.split('&')[0]
     os.system('tar -xzvf ' + cfg.use_tmp_dir + file_name)

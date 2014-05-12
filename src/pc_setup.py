@@ -5,7 +5,8 @@ __licence__ = "GPL_v3"
 __version__ = "0.1"
 __email__ = "martin-penicka@seznam.cz"
 
-import os
+import os, cfg
+from modules.auto_python import Python
 
 # =================
 
@@ -28,7 +29,6 @@ init_alias = True
 ppa = []
 
 software = ['vlc', 'calibre', 'gimp', 'blender', 'unrar']
-python_lib = ['numpy', 'matplotlib', 'scipy', 'pip', 'nmap', 'xlrd', 'biopython']
 games = ['openttd', 'openarena']
 
 eclipse = 'http://www.auto_eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/kepler/SR2/auto_eclipse-standard-kepler-SR2-linux-gtk-x86_64.tar.gz&mirror_id=580'
@@ -48,10 +48,6 @@ nano = []
 def pr(note):
     if not silent:
         print note
-        
-def get_python_lib():
-    for lib in python_lib:
-        yield 'python-' + lib
 
 def install_list(sw_list):
     for item in list:
@@ -78,10 +74,9 @@ if install_games:
     install_list(games)
     
 if install_python_lib:
-    pr('# ----------')
-    pr('Installing python libraries')
-    pr('# ----------')
-    install_list(python_lib)
+    ins_p = Python(cfg)
+    ins_p.silent = False
+    ins_p.run()
     
 # setup Minecraft
 
