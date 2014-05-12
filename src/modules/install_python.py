@@ -1,10 +1,11 @@
 import os
 from modules.install_module import InstallModule
 
-class Python(InstallModule):
+class InstallPython(InstallModule):
     
     def __init__(self, _cfg):
-        self.cfg = _cfg
+        InstallModule.__init__(self, _cfg)
+        
         self.psu_bash = 'export PYTHONSTARTUP=$HOME/.pythonstartup'
     
     def run(self):

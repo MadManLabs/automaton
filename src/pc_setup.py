@@ -6,7 +6,7 @@ __version__ = "0.1"
 __email__ = "martin-penicka@seznam.cz"
 
 import os, cfg
-from modules.auto_python import Python
+from modules.install_python import InstallPython
 
 # =================
 
@@ -74,8 +74,7 @@ if install_games:
     install_list(games)
     
 if install_python_lib:
-    ins_p = Python(cfg)
-    ins_p.silent = False
+    ins_p = InstallPython(cfg)
     ins_p.run()
     
 # setup Minecraft

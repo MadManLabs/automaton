@@ -2,8 +2,9 @@
 
 class InstallModule():
     
-    def __init__(self):
-        self.silent = True
+    def __init__(self, _cfg):
+        self.cfg = _cfg
+        self.silent = self.cfg.silent_install
     
     def __del__(self):
         pass
